@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    padding: 20px;
+    align: left;
+}
+
+label{
+    margin: 25px 5px;
+}
+
+#form_box{
+    position: absolute;
+    width: 450px;
+    height: 700px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 5px solid;
+    border-radius: 40px
+
+}
+#remove_items {
+    background-color: #E5E5E5;
+    color: #302B29;
+    padding: 30px;
+}
+
+#add_btn{
+    background-color: #01a88a;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer
+    }
+
+
+#remove_btn {
+    background-color: lightgray
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px 15px;
+}
+
+select {
+    font_family: "Railway";
+    font-size: 0.85em;
+    text-align: center;
+    width: 200px;
+    margin: 50px 15px;
+    padding: 5px 0px;
+    border: 2px solid darkgrey;
+}
+
+#add_btn:hover {
+    background-color: darkslategrey;
+}
