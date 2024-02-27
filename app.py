@@ -18,6 +18,7 @@ def index():
 def add_items():
     session["shopping_items"].append(request.form["new-item"])
     session.modified = True
+    session["shopping_items"] = sorted(session["shopping_items"])
     return redirect(request.referrer)
 
 
@@ -45,7 +46,7 @@ def get_db():
 
         shopping_list = all_data.copy()
         random.shuffle(shopping_list)
-        shopping_list = shopping_list[:5]
+        shopping_list = sorted(shopping_list[:5])
     return all_data, shopping_list
 
 
