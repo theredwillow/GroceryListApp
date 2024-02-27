@@ -26,13 +26,42 @@ label {
     margin: auto;
     border: 5px solid;
     border-radius: 40px
-
 }
 
 #remove_items {
     background-color: #E5E5E5;
     color: #302B29;
     padding: 30px;
+}
+
+.to-be-removed {
+    text-decoration: line-through;
+}
+
+#remove_btn {
+    display: none;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    background-color: #FF0011;
+    cursor: pointer;
+}
+
+form:has(.to-be-removed) #remove_btn {
+    display: inline-block;
+}
+
+#new_item {
+    font-family: "Railway";
+    font-size: 0.85em;
+    text-align: center;
+    width: 200px;
+    margin: 50px 15px;
+    padding: 5px 0px;
+    border: 2px solid darkgrey;
 }
 
 #add_btn {
@@ -44,27 +73,6 @@ label {
     margin: 10px;
     padding: 10px 15px;
     cursor: pointer
-    }
-
-
-#remove_btn {
-    background-color: lightgray;
-    color: black;
-    font-weight: bold;
-    border-radius: 20px;
-    border: 2px solid white;
-    margin: 10px;
-    padding: 10px 15px;
-}
-
-select {
-    font-family: "Railway";
-    font-size: 0.85em;
-    text-align: center;
-    width: 200px;
-    margin: 50px 15px;
-    padding: 5px 0px;
-    border: 2px solid darkgrey;
 }
 
 #add_btn:hover {
