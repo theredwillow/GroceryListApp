@@ -39,6 +39,7 @@ def remove_items():
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
+        # FIXME If no grocery_list.db, run generate_grocery_list.py
         db = g._database = sqlite3.connect('grocery_list.db')
         cursor = db.cursor()
         cursor.execute("select name from groceries")

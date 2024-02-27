@@ -1,10 +1,9 @@
-
 import sqlite3
 
 groceries = [
   "apples",
   "bananas",
-  "clemintines",
+  "clementines",
   "dill",
   "eggs",
   "flour",
@@ -17,7 +16,7 @@ groceries = [
   "margarine",
   "onion",
   "potatoes",
-  "rosmary",
+  "rosemary",
   "salt",
   "thyme",
   "vinegar",
@@ -38,8 +37,8 @@ groceries = [
   "strawberries",
   "cranberries",
   "mangos",
-  "pappers",
-  "zuccinis",
+  "peppers",
+  "zucchinis",
   "lime",
   "broth",
   "mushrooms",
@@ -50,7 +49,7 @@ groceries = [
   "cream",
   "paprika",
   "tumeric",
-  "cinamon",
+  "cinnamon",
   "pumpkin",
   "basil",
   "tomatoes",
@@ -58,7 +57,7 @@ groceries = [
   "cake",
   "chocolate",
   "gum",
-  "pinapple",
+  "pineapple",
   "oranges",
   "lettuce",
   "cheese",
@@ -67,7 +66,7 @@ groceries = [
 
 groceries = sorted(groceries)
 
-connection = sqlite3.connect("grocery_lsit.db")
+connection = sqlite3.connect("grocery_list.db")
 cursor = connection.cursor()
 
 cursor.execute("create table groceries (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT )")
