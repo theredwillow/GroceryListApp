@@ -1,6 +1,6 @@
 import sqlite3
 import random
-from flask import Flask, session, render_template, request, g
+from flask import Flask, redirect, session, render_template, request, g
 
 app = Flask(__name__)
 app.secret_key = "iosdhnj;osdnuijsab"
@@ -8,31 +8,28 @@ app.secret_key = "iosdhnj;osdnuijsab"
 
 @app.route("/", methods=["POST", "GET"])
 def index():
-    session["all_items"], session["shopping_items"] = get_db()
+    if ("all_items" not in session or "shopping_items" not in session):
+        session["all_items"], session["shopping_items"] = get_db()
     return render_template("index.html", all_items=session["all_items"],
                            shopping_items=session["shopping_items"])
 
 
 @app.route("/add_items", methods=["post"])
 def add_items():
-    session["shopping_items"].append(request.form["select_items"])
+    session["shopping_items"].append(request.form["new_item"])
     session.modified = True
-    return render_template("index.html", all_items=session["all_items"],
-                           shopping_items=session["shopping_items"])
+    return redirect(request.referrer)
 
 
 @app.route("/remove_items", methods=["post"])
 def remove_items():
     checked_boxes = request.form.getlist("check")
-
     for item in checked_boxes:
         if item in session["shopping_items"]:
             idx = session["shopping_items"].index(item)
             session["shopping_items"].pop(idx)
             session.modified = True
-
-    return render_template("index.html", all_items=session["all_items"],
-                           shopping_items=session["shopping_items"])
+    return redirect(request.referrer)
 
 
 # Connection SQLite database to our application
