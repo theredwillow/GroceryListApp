@@ -39,6 +39,7 @@ label {
     color: #302B29;
     padding: 30px;
     flex: auto;
+    overflow: auto;
 }
 
 .to-be-removed {
