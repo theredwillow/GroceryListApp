@@ -6,30 +6,30 @@
         <script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}"></script>
    </head>
     <body>
-    <div id="form_box">
+    <div id="form-box">
         <!-- LOGO -->
         <div>
             <img src="{{url_for('static', filename='grocer.png')}}" alt="Grocery app logo">
         </div>
 
         <!-- REMOVE ITEMS FORM -->
-        <div id="remove_items">
+        <div id="remove-items">
             <form action="/remove_items" method="POST">
                 {% for item in shopping_items%}
                 <div id="{{item}}">
-                    <input type="checkbox" name="check" value="{{item}}" onchange="check_me(this)">
+                    <input type="checkbox" name="check" value="{{item}}" onchange="checkItem(this)">
                     <label for="{{items}}" name="{{item}}">{{ item }}</label>
                 </div>
                 {% endfor %}
-                <input type="submit" value="REMOVE ITEMS" id="remove_btn">
+                <input type="submit" value="REMOVE ITEMS" id="remove-btn">
             </form>
         </div>
 
         <!-- ADD ITEMS FORM -->
-        <div id="add_item">
+        <div id="add-item">
             <form action="/add_items" method="POST">
-                <input type="text" name="new_item" id="new_item" placeholder="Add new item">
-                <input type="submit" value="ADD ITEM" id="add_btn">
+                <input type="text" name="new-item" id="new-item" placeholder="Add new item" oninput="verifyAdd()">
+                <input type="submit" value="ADD ITEM" id="add-btn" disabled>
             </form>
         </div>
         </div>

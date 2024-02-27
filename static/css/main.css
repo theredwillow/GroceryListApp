@@ -11,11 +11,15 @@ img {
     padding: 20px;
 }
 
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
 label {
     margin: 25px 5px;
 }
 
-#form_box {
+#form-box {
     position: absolute;
     width: 450px;
     height: 700px;
@@ -30,7 +34,7 @@ label {
     flex-direction: column;
 }
 
-#remove_items {
+#remove-items {
     background-color: #E5E5E5;
     color: #302B29;
     padding: 30px;
@@ -41,7 +45,7 @@ label {
     text-decoration: line-through;
 }
 
-#remove_btn {
+#remove-btn {
     display: none;
     font-weight: bold;
     border-radius: 20px;
@@ -53,11 +57,11 @@ label {
     cursor: pointer;
 }
 
-form:has(.to-be-removed) #remove_btn {
+form:has(.to-be-removed) #remove-btn {
     display: inline-block;
 }
 
-#new_item {
+#new-item {
     font-family: "Railway";
     font-size: 0.85em;
     text-align: center;
@@ -67,7 +71,7 @@ form:has(.to-be-removed) #remove_btn {
     border: 2px solid darkgrey;
 }
 
-#add_btn {
+#add-btn {
     background-color: #01a88a;
     color: white;
     font-weight: bold;
@@ -78,6 +82,11 @@ form:has(.to-be-removed) #remove_btn {
     cursor: pointer;
 }
 
-#add_btn:hover {
+#add-btn:disabled {
+    background-color: #B0B0B0;
+    cursor: not-allowed;
+}
+
+#add-btn:active:hover {
     background-color: darkslategrey;
 }

@@ -16,7 +16,7 @@ def index():
 
 @app.route("/add_items", methods=["post"])
 def add_items():
-    session["shopping_items"].append(request.form["new_item"])
+    session["shopping_items"].append(request.form["new-item"])
     session.modified = True
     return redirect(request.referrer)
 
