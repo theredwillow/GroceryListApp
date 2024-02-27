@@ -6,17 +6,16 @@ body {
     text-align: center;
 }
 
-img{
+img {
     width: 200px;
     padding: 20px;
-    align: left;
 }
 
-label{
+label {
     margin: 25px 5px;
 }
 
-#form_box{
+#form_box {
     position: absolute;
     width: 450px;
     height: 700px;
@@ -29,13 +28,14 @@ label{
     border-radius: 40px
 
 }
+
 #remove_items {
     background-color: #E5E5E5;
     color: #302B29;
     padding: 30px;
 }
 
-#add_btn{
+#add_btn {
     background-color: #01a88a;
     color: white;
     font-weight: bold;
@@ -48,7 +48,7 @@ label{
 
 
 #remove_btn {
-    background-color: lightgray
+    background-color: lightgray;
     color: black;
     font-weight: bold;
     border-radius: 20px;
@@ -58,7 +58,7 @@ label{
 }
 
 select {
-    font_family: "Railway";
+    font-family: "Railway";
     font-size: 0.85em;
     text-align: center;
     width: 200px;
